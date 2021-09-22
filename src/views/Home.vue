@@ -171,6 +171,7 @@ export default {
       if (me.$v.$invalid) {
         me.submitted = false;
       } else {
+        me.items = [];
         let a = parseInt(me.formFields.inferior); //Extremo inferior del intervalo;
         let b = parseInt(me.formFields.superior); //Extremo superior del intervalo;
         let n = parseInt(me.formFields.iteraciones); //Número de iteraciones
@@ -207,6 +208,13 @@ export default {
     f(x) {
       return x ** 3 + 4 * x ** 2 - 10;
     },
+    reset(){
+      const me = this;
+      me.formFields.inferior = me.formFields.superior = me.formFields.iteraciones = "";
+      me.submitted = false;
+      me.$v.formFields.$reset();
+      me.items = [];
+    }
   },
 };
 </script>
