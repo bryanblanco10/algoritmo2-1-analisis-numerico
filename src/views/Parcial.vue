@@ -3,14 +3,14 @@
     <div class="row text-center mb-3">
       <div class="col-12">
         <div class="title__section">
-          Método de Punto Fijo
+          Parcial segundo corte (Mètodo de Newton)
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
         <div class="card card__admin p-5">
-          <div class="title__section mb-3 text-center">Algoritmo 2.2</div>  
+          <div class="title__section mb-3 text-center">Algoritmo 2.3</div>  
           <form @submit.stop.prevent="submit">
             <div class="row justify-content-center">
               <div class="col-lg-4 col-md-4 col-12 mb-2">
@@ -108,14 +108,15 @@ export default {
         me.submitted = false;
       } else {
         me.items = [];
-        let b = 1.5 //b = p_0
+        let b = Math.PI/4 //b = p_0
         let tol = (10)**(-4);
-        let n = 10;
+        let n = parseInt(me.formFields.iteraciones);
         let i = 1;
         let p;
 
         for(i; i <= n; i++){
-          p = me.g(b);
+
+          p = b - me.f(b)/me.g(b); 
 
           if(Math.abs(p - b) < tol){
             console.log(p);
@@ -129,11 +130,15 @@ export default {
           };
 
           me.items.push(item);
+          console.log(me.items);
         }
       }
     },
+    f(x) {
+      return Math.cos(x) - x;
+    },
     g(x) {
-      return (1/2)*(10 - x**3)**(1/2);
+      return -Math.sin(x) - 1;
     },
     reset(){
       const me = this;

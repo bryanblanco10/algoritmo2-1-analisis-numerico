@@ -23,6 +23,13 @@ const routes = [
     name: "metodoPuntoFijo",
     component: () =>
       import(/* webpackChunkName: "metodoPuntoFijo"*/ "@/views/MetodoPuntoFijo"),
+  },
+
+  {
+    path: '/parcial-metodo-de-newton',
+    name: "metodoNewton",
+    component: () =>
+      import(/* webpackChunkName: "metodoNewton"*/ "@/views/Parcial"),
   }
 ]
 
