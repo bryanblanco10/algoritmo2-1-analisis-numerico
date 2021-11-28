@@ -59,6 +59,13 @@ input::-webkit-inner-spin-button
 	color: var(--black-color);
 }
 
+.title {
+  font-size: 18px;
+	font-family: var(--fuente-econde-sans);
+	font-weight: 700;
+	color: var(--black-color);
+}
+
 .header
 {
   position: sticky;

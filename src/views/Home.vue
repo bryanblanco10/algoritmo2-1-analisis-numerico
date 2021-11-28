@@ -27,8 +27,16 @@
       <div class="col-lg-4 col-md-4 col-12 mb-3">
         <router-link to="/parcial-metodo-de-newton">
           <div class="card card__admin h-100">
-            <img class="card-img-top h-75 mb-3" src="@/assets/img/metodonewton.png" alt="puntofijo">
+            <img class="card-img-top h-75 mb-3" src="@/assets/img/metodonewton.png" alt="parcial">
             <div class="title__section text-center">Parcial - Método de Newton</div>  
+          </div>
+        </router-link>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 mb-3">
+        <router-link to="/parcial-spline-cubico-natural">
+          <div class="card card__admin h-100">
+            <img class="card-img-top h-75 mb-3" src="@/assets/img/spline.png" alt="parcial3">
+            <div class="title__section text-center">Parcial 3 - Spline cúbico natural</div>  
           </div>
         </router-link>
       </div>

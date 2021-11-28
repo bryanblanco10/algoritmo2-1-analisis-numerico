@@ -30,6 +30,13 @@ const routes = [
     name: "metodoNewton",
     component: () =>
       import(/* webpackChunkName: "metodoNewton"*/ "@/views/Parcial"),
+  },
+
+  {
+    path: '/parcial-spline-cubico-natural',
+    name: "spline-cubico-natural",
+    component: () =>
+      import(/* webpackChunkName: "spline-cubico-natural"*/ "@/views/Parcial3"),
   }
 ]
 
